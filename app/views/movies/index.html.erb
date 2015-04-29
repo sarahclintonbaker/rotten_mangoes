@@ -1,11 +1,14 @@
-<h1>Rotten Mangoes</h1>
-  <%= link_to "Submit a movie!", new_movie_path %>
+<h1>ROTTEN MANGOES</h1>
+  <h4><%= link_to "Submit a Movie!", new_movie_path %></h4>
   <hr>
+   
   <% @movies.each do |movie| %>
+    <div class="show_movie">
     <%= image_tag(movie.image_url(:thumb).to_s) %>
-    <h2><%= link_to movie.title, movie_path(movie) %> | <%= movie.review_average %>/10</h2>
+    <h2><div class="image" ><%= link_to movie.title, movie_path(movie) %> | <%= movie.review_average %>/10</div></h2>
     <h3><%= movie.release_date %></h3>
-    <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
+    <h5>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h5>
     <p><%= movie.description %></p>
     <hr>
+    </div>
   <% end %>
