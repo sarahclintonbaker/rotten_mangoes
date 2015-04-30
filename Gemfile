@@ -39,6 +39,7 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

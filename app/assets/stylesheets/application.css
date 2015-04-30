@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+<<<<<<< HEAD
 
  body {
   font-family: futura;
@@ -39,3 +40,5 @@
   border-color: white;
  }
 
+=======
+>>>>>>> d22c80de333d21e822a461376ee2ff26023ac5ba
