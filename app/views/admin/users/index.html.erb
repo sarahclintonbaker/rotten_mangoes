@@ -1,0 +1,6 @@
+<h1>ROTTEN MANGOES</h1>
+   
+  <% @users.each do |user| %>
+    <h2> <%= user.full_name %> | <%= ADMIN if user.admin? %></h2>
+    <hr>
+  <% end %>
