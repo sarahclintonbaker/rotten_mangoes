@@ -20,11 +20,12 @@ class Admin::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+  end
 
   protected
 
   # def authorized?
-    
+
   # end
 
 end
