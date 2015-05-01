@@ -1,6 +1,14 @@
 <h1>ROTTEN MANGOES</h1>
-   
+
+<h4><%= link_to "Create a new user, yo!", new_user_path %></h4>
+  <hr>
+  
+<%= paginate @users %>
+
   <% @users.each do |user| %>
-    <h2> <%= user.full_name %> | <%= ADMIN if user.admin? %></h2>
+  <% @user_edit = user %>
+    <h2> (<%= link_to "edit", user_path(@user_edit.id) %>, <%= link_to "delete", user_path(@user_edit.id), method: :delete, data: { confirm: "You sure?" } %>)
+    <%= link_to user.full_name %>  <%= (ADMIN) if @user_edit.admin? %></h2>
+
     <hr>
   <% end %>

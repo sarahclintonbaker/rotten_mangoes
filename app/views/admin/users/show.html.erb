@@ -1,0 +1,7 @@
+<%= link_to "Back to users", admin_users_path %>
+
+
+<h2><%= @user.full_name %> (<%= link_to "edit", edit_user_path(@user.id) %>, <%= link_to "delete", edit_user_path(@user.id), method: :delete, data: { confirm: "You sure?" } %>) </h2>
+<h3>User created: <%= formatted_date(@user.created_at) %></h3>
+
+<br/>
